@@ -48,7 +48,7 @@ export function Approach() {
   return (
     <section
       id="approach"
-      className="relative scroll-mt-24 border-t border-border py-20 sm:py-28"
+      className="section-tone section-dark relative scroll-mt-24 border-t border-border py-20 sm:py-28"
       aria-labelledby="approach-heading"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">

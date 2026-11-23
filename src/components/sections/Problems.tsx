@@ -8,7 +8,7 @@ export function Problems() {
   return (
     <section
       id="problems"
-      className="relative scroll-mt-24 border-t border-border py-20 sm:py-28"
+      className="section-tone section-light relative scroll-mt-24 border-t border-border py-20 sm:py-28"
       aria-labelledby="problems-heading"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -21,7 +21,7 @@ export function Problems() {
         <Stagger className="grid gap-px bg-border sm:grid-cols-3" stagger={0.12}>
           {problems.map((problem, index) => (
             <StaggerItem key={problem.title}>
-              <article className="group relative h-full bg-background p-7 transition-colors duration-300 hover:bg-surface sm:p-8">
+              <article className="group relative h-full bg-surface p-7 transition-colors duration-300 hover:bg-surface-elevated sm:p-8">
                 <span
                   className="font-display mb-6 block text-sm tracking-[0.2em] text-accent/80"
                   aria-hidden

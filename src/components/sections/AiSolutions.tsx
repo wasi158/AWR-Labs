@@ -19,19 +19,17 @@ function SolutionRow({
 
   return (
     <article
-      className={`seq-item group flex gap-5 bg-background/40 px-6 py-6 sm:gap-7 sm:px-8 sm:py-7 ${
-        active ? "seq-item-active" : ""
-      }`}
+      className={`seq-item group ${active ? "seq-item-active" : ""}`}
       aria-current={active ? "true" : undefined}
     >
       <span
-        className={`seq-index font-display pt-0.5 text-sm tabular-nums ${
-          active ? "text-accent" : "text-accent/70"
+        className={`seq-index font-display text-sm ${
+          active ? "text-accent" : "text-accent/65"
         }`}
       >
         {String(index + 1).padStart(2, "0")}
       </span>
-      <div className="relative min-w-0 flex-1">
+      <div className="seq-body">
         <h3
           className={`seq-title font-display text-lg font-semibold tracking-tight sm:text-xl ${
             active ? "text-accent-bright" : "text-foreground"
@@ -39,7 +37,7 @@ function SolutionRow({
         >
           {solution.title}
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-muted">{solution.description}</p>
+        <p className="seq-copy text-sm text-muted sm:text-[0.95rem]">{solution.description}</p>
       </div>
       {active ? <span key={`progress-${index}`} className="seq-progress" aria-hidden /> : null}
     </article>
@@ -50,17 +48,17 @@ export function AiSolutions() {
   return (
     <section
       id="ai-solutions"
-      className="relative scroll-mt-24 overflow-hidden border-t border-border py-20 sm:py-28"
+      className="section-tone section-light relative scroll-mt-24 overflow-hidden border-t border-border py-20 sm:py-28"
       aria-labelledby="ai-heading"
     >
       <div
-        className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(ellipse_at_right,rgba(46,182,255,0.08),transparent_60%)]"
+        className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(ellipse_at_right,rgba(0,180,255,0.1),transparent_62%)]"
         aria-hidden
       />
 
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-16">
-          <div>
+        <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14 xl:gap-16">
+          <div className="lg:sticky lg:top-28">
             <SectionHeading
               eyebrow="AI solutions"
               title="Practical AI that supports your tech stack"
@@ -70,11 +68,11 @@ export function AiSolutions() {
               <p id="ai-heading" className="sr-only">
                 AI solutions from AWR Labs
               </p>
-              <div className="border border-border bg-surface/60 p-6 sm:p-7">
-                <p className="font-display text-sm tracking-[0.16em] text-accent uppercase">
+              <div className="border border-border bg-surface/70 px-6 py-6 sm:px-7 sm:py-7">
+                <p className="font-display text-xs tracking-[0.18em] text-accent uppercase">
                   How we use AI
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-muted">
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
                   AI is one part of the solution — not the whole story. We ship features that save
                   time, reduce errors, and stay tied to your live business data.
                 </p>
@@ -85,7 +83,7 @@ export function AiSolutions() {
           <SequentialActive
             count={aiSolutions.length}
             intervalMs={5000}
-            className="divide-y divide-border border border-border"
+            className="seq-list"
           >
             {aiSolutions.map((solution, index) => (
               <SolutionRow key={solution.title} solution={solution} index={index} />

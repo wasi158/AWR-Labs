@@ -48,7 +48,7 @@ export function Products() {
   return (
     <section
       id="products"
-      className="relative scroll-mt-24 border-t border-border py-20 sm:py-28"
+      className="section-tone section-dark relative scroll-mt-24 border-t border-border py-20 sm:py-28"
       aria-labelledby="products-heading"
     >
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -157,7 +157,7 @@ export function Products() {
                   <button
                     type="button"
                     onClick={() => setModalOpen(true)}
-                    className="focus-ring inline-flex items-center bg-accent px-4 py-2.5 text-sm font-medium text-[#031018] transition-colors hover:bg-accent-bright"
+                    className="focus-ring inline-flex items-center bg-accent px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-bright"
                   >
                     Full details
                   </button>

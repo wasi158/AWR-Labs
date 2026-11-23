@@ -4,10 +4,10 @@ import { navLinks, siteConfig } from "@/lib/site";
 
 export function Footer() {
   return (
-    <footer className="site-footer border-t border-border">
+    <footer className="section-tone section-dark site-footer border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-5 py-12 sm:px-8 md:flex-row md:items-start md:justify-between">
         <div className="max-w-sm space-y-4">
-          <BrandLogo size="footer" onDarkSurface />
+          <BrandLogo size="footer" variant="light" />
           <p className="text-sm leading-relaxed text-muted">{siteConfig.tagline}</p>
         </div>
 

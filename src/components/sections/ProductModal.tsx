@@ -183,7 +183,7 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
                   href={product.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="focus-ring inline-flex items-center bg-accent px-4 py-2.5 text-sm font-medium text-[#031018] transition-colors hover:bg-accent-bright"
+                  className="focus-ring inline-flex items-center bg-accent px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-bright"
                 >
                   Open live preview
                 </a>

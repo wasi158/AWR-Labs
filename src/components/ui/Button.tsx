@@ -13,9 +13,9 @@ type ButtonProps = {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    "bg-accent text-[#031018] hover:bg-accent-bright shadow-[0_0_0_1px_rgba(94,200,255,0.35)]",
+    "bg-accent text-white hover:bg-accent-bright shadow-[0_0_0_1px_rgba(0,180,255,0.35)]",
   secondary:
-    "bg-transparent text-foreground border border-border-strong hover:border-accent hover:text-accent-bright",
+    "bg-transparent text-foreground border border-border-strong hover:border-accent hover:text-accent-deep",
   ghost: "bg-transparent text-muted hover:text-foreground",
 };
 

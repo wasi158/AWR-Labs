@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: siteConfig.description,
     start_url: "/",
     display: "standalone",
-    background_color: "#03060c",
-    theme_color: "#03060c",
+    background_color: "#ffffff",
+    theme_color: "#00b4ff",
     icons: [
       {
         src: "/awr-labs-logo.png",

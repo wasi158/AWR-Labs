@@ -4,7 +4,8 @@ import { siteConfig } from "@/lib/site";
 type BrandLogoProps = {
   size?: "nav" | "hero" | "footer";
   className?: string;
-  onDarkSurface?: boolean;
+  /** Light wordmark for dark backgrounds (keeps blue mark) */
+  variant?: "default" | "light";
 };
 
 const sizes = {
@@ -16,20 +17,15 @@ const sizes = {
 export function BrandLogo({
   size = "nav",
   className = "",
-  onDarkSurface = false,
+  variant = "default",
 }: BrandLogoProps) {
   const dimensions = sizes[size];
+  const src = variant === "light" ? "/awr-labs-logo-light.png" : "/awr-labs-logo.png";
 
   return (
-    <span
-      className={`inline-flex items-center ${
-        onDarkSurface
-          ? "rounded-md bg-white/95 px-2.5 py-1.5 shadow-[0_0_0_1px_rgba(46,182,255,0.18)]"
-          : ""
-      } ${className}`.trim()}
-    >
+    <span className={`inline-flex items-center ${className}`.trim()}>
       <Image
-        src="/awr-labs-logo.png"
+        src={src}
         alt={siteConfig.name}
         width={dimensions.width}
         height={dimensions.height}

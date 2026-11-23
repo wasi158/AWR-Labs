@@ -9,15 +9,11 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[calc(100svh-4.75rem)] items-center overflow-hidden pt-10 pb-16"
+      className="section-tone section-dark relative flex min-h-svh items-center overflow-hidden pt-[5.5rem] pb-16 sm:pt-[6rem]"
       aria-labelledby="hero-heading"
     >
       <div className="pointer-events-none absolute inset-0 bg-grid" aria-hidden />
-      <div
-        className="pointer-events-none absolute inset-x-0 top-8 h-px accent-line opacity-60"
-        aria-hidden
-      />
-      <AmbientPulse className="pointer-events-none absolute top-1/3 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(46,182,255,0.16),transparent_68%)] blur-2xl" />
+      <AmbientPulse className="pointer-events-none absolute top-1/3 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(0,180,255,0.2),transparent_68%)] blur-2xl" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-5 text-center sm:px-8">
         <h1

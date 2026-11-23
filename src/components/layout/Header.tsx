@@ -23,20 +23,18 @@ export function Header() {
     };
   }, [open]);
 
+  const solid = scrolled || open;
+
   return (
-    <header className="sticky top-0 z-50">
-      <div
-        className={`nav-shell nav-shell-light transition-[box-shadow,background-color,border-color] duration-300 ${
-          scrolled || open ? "nav-shell-solid" : "nav-shell-soft"
-        }`}
-      >
+    <header className="fixed inset-x-0 top-0 z-50">
+      <div className={`nav-shell nav-shell-light ${solid ? "nav-shell-solid" : "nav-shell-soft"}`}>
         <div className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between gap-4 px-5 sm:h-[4.75rem] sm:px-8">
           <InPageLink
             id="top"
             className="focus-ring relative z-10 shrink-0"
             aria-label="AWR Labs home"
           >
-            <BrandLogo size="nav" />
+            <BrandLogo size="nav" variant={solid ? "default" : "light"} />
           </InPageLink>
 
           <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
@@ -84,8 +82,8 @@ export function Header() {
 
         <div
           id="mobile-nav"
-          className={`overflow-hidden border-t border-black/8 transition-[max-height,opacity] duration-300 md:hidden ${
-            open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          className={`nav-mobile overflow-hidden transition-[max-height,opacity] duration-300 md:hidden ${
+            open ? "max-h-96 border-t border-black/10 opacity-100" : "max-h-0 border-0 opacity-0"
           }`}
           aria-hidden={!open}
         >
